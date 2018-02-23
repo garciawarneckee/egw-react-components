@@ -4,10 +4,10 @@
   "description": "Custom React Components ",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel lib -d build",
+    "build": "babel lib -d build --copy-files",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
