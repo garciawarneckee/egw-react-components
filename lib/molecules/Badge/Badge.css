@@ -1,0 +1,13 @@
+.Badge-Container {
+    border: 1px lightgray solid;
+    background: white;
+    padding: 2%;
+    text-align: center;
+    width: 20%;
+}
+
+.Badge-Name {
+    font-size: 16px;
+    color: grey;
+    font-weight: 500;
+}
