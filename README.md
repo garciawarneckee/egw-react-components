@@ -1,1 +1,54 @@
-## EGW Custom React Components
+# EGW Custom React Components Library
+
+## Purpose
+  There is not much to say... this is a library that I built to reuse my custom components
+  in my projects, and I humbly share with you. 
+  This is not a complete library with a lot of components, and I think that it will never be completed. 
+  I will updates components as I need to use it, or I have and new idea of component to reuse.
+
+## Install it
+  `npm i egw-react-components`
+  
+## How to view the components 
+  To get a view of the component's behavior execute:
+  `npm run storybook`
+  
+  This will run an app called [storybook](https://storybook.js.org/) that opens a new browser tab that displays different cases of each components that lets you intereact with them. 
+  
+## How to use the components in your projects
+
+## Components Description
+
+`import { NameOfComponent } from 'egw-react-components'`
+
+#### DraggableButton
+Renders a button that allow you to drag and drop in the browser window limited to the body tag.
+
+##### Props 
+  **iconName** - The name of the icon in [free-font-awesome-icons](https://fontawesome.com/icons?d=gallery&m=free)
+  **text** - Text to display in the button.
+
+  *Either both or one of them needs to be present in order to render the button correctly. 
+  If both are present the icon will be displayed and then the text in line.*
+
+  **defaultPosition** -  An object that represents the initial position of the button. {x: number, y: number }
+  **style** - Custom css-based style object. 
+  **onStart** - Function it is executed when the object is started to be dragged. 
+  **onDrag** - Function it is executed every time the object is being dragged.
+  **onStop** - Fucntion it is executed when the object is dropped.
+
+#### RoundedImage
+Renders an image which is rounded. With three differents sizes: small, medium and large.
+
+##### Props 
+  **src** - The URL of the image you want to display. 
+  **size** - The size of the image.
+  **style** - Custom css-based style object. 
+   
+
+# Third party libraries 
+I used this libraries to create the components:
+
+[react-draggable](https://github.com/mzabriskie/react-draggable)
+[fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+[storybook](https://storybook.js.org/)
