@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { expect, assert } from 'chai';
 
-import DraggableButton from '../../lib/atoms/DraggableButton';
+import DraggableButton from '../../lib/atoms/DraggableButton/DraggableButton';
 
 
 describe('<DragabbleButton />', () => {
