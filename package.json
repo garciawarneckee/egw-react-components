@@ -4,7 +4,10 @@
   "description": "Custom React Components ",
   "main": "build/index.js",
   "scripts": {
-    "build": "babel lib -d build --copy-files",
+    "clean": "rimraf build && mkdir build",
+    "build": "npm-run-all clean build:css build:js",
+    "build:js": "babel lib -d build --copy-files",
+    "build:css": "node-sass ./lib -o build/",
     "lint": "eslint lib/**; exit 0",
     "lint:watch": "esw -w lib/**",
     "prepare": "npm run build",
@@ -56,7 +59,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "eslint-watch": "^3.1.5",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>test/setupTests.js"
