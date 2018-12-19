@@ -3,8 +3,9 @@ import {
   storiesOf
 } from '@storybook/react';
 
-import DragabbleButton from '../lib/atoms/DraggableButton';
-import RoundedImage from '../lib/atoms/RoundedImage';
+import DragabbleButton from '../lib/atoms/DraggableButton/DraggableButton';
+import RoundedImage from '../lib/atoms/RoundedImage/RoundedImage';
+import ToggleSwitch from '../lib/atoms/ToggleSwitch/ToggleSwitch';
 
 storiesOf('DraggableButton', module)
 
@@ -114,7 +115,15 @@ storiesOf('DraggableButton', module)
       />
     ));
 
+    storiesOf('ToggleSwitch', module)
 
+    .add('Default toggle switch', () => ( 
+      <ToggleSwitch 
+        theme="default"
+        className="app-switch"
+        enabled={false}
+      />
+    ))
 
 
     
