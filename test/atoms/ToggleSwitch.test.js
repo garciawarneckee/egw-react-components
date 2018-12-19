@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { expect, assert } from 'chai';
+import sinon from 'sinon';
 
 import ToggleSwitch from '../../lib/atoms/ToggleSwitch/ToggleSwitch';
 
@@ -32,6 +33,13 @@ describe('<ToggleSwitch />', () => {
     expect(wrapper.find('.switch-toggle')).to.have.lengthOf(1);
     expect(wrapper.find('.switch-toggle--on')).to.have.lengthOf(1);
     expect(wrapper.find('.switch-toggle--off')).to.have.lengthOf(0);
+  });
+
+  it('executes onStateChanged function when it is clicked', () => {
+    const mockOnStateChanged = sinon.spy();
+    const wrapper = shallow(<ToggleSwitch enabled={true} onStateChanged={mockOnStateChanged}/>);
+    wrapper.find('.switch').simulate('click', { persist() {}, preventDefault() {} });
+    expect(mockOnStateChanged).to.have.property('callCount', 1);
   });
 
 
