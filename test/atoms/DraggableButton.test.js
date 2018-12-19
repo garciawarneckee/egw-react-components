@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { expect, assert } from 'chai';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import DraggableButton from '../../lib/atoms/DraggableButton';
 
@@ -31,6 +30,14 @@ describe('<DragabbleButton />', () => {
     const wrapper = shallow(<DraggableButton iconName='thumbs-up'/>);
     expect(wrapper.find('.icon')).to.have.lengthOf(1);
     expect(wrapper.find('.spanText')).to.have.lengthOf(0);
+  });
+
+  it('renders only text when the text property is given but no icon', () => {
+    const wrapper = shallow(<DraggableButton text='Click me!'/>);
+    const button = wrapper.find('.spanText');
+    expect(button).to.have.lengthOf(1);
+    expect(button.text()).to.be.eql('Click me!');
+    expect(wrapper.find('.icon')).to.have.lengthOf(0);
   });
 
   it('renders only text when the text property is given but no icon', () => {
