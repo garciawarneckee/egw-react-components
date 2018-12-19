@@ -115,8 +115,7 @@ storiesOf('DraggableButton', module)
       />
     ));
 
-    storiesOf('ToggleSwitch', module)
-
+  storiesOf('ToggleSwitch', module)
     .add('Default toggle switch', () => ( 
       <ToggleSwitch 
         theme="default"
@@ -124,6 +123,19 @@ storiesOf('DraggableButton', module)
         enabled={false}
       />
     ))
-
-
+    .add('Default toggle switch with custom behavior', () => ( 
+      <ToggleSwitch 
+        theme="default"
+        className="app-switch"
+        enabled={false}
+        onStateChanged={ () => { console.log('I have changed my status') }}
+      />
+    ))
+    .add('Ghrapite small toggle switch', () => ( 
+      <ToggleSwitch 
+        theme="graphite-small"
+        className="app-switch"
+        enabled={false}
+      />
+    ))
     
