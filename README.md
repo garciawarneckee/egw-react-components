@@ -25,34 +25,34 @@
 Renders a button that allow you to drag and drop in the browser window limited to the body tag.
 
 ##### Props 
-  **iconName** - The name of the icon in [free-font-awesome-icons](https://fontawesome.com/icons?d=gallery&m=free)
-  **text** - Text to display in the button.
+  - **iconName** - The name of the icon in [free-font-awesome-icons](https://fontawesome.com/icons?d=gallery&m=free)
+  - **text** - Text to display in the button.
 
   *Either both or one of them needs to be present in order to render the button correctly. 
   If both are present the icon will be displayed and then the text in line.*
 
-  **defaultPosition** -  An object that represents the initial position of the button. {x: number, y: number }
-  **style** - Custom css-based style object. 
-  **onStart** - Function it is executed when the object is started to be dragged. 
-  **onDrag** - Function it is executed every time the object is being dragged.
-  **onStop** - Fucntion it is executed when the object is dropped.
+  - **defaultPosition** -  An object that represents the initial position of the button. {x: number, y: number }
+  - **style** - Custom css-based style object. 
+  - **onStart** - Function it is executed when the object is started to be dragged. 
+  - **onDrag** - Function it is executed every time the object is being dragged.
+  - **onStop** - Fucntion it is executed when the object is dropped.
 
 #### RoundedImage
 Renders an image which is rounded. With three differents sizes: small, medium and large.
 
 ##### Props 
-  **src** - The URL of the image you want to display. 
-  **size** - The size of the image.
-  **style** - Custom css-based style object. 
+  - **src** - The URL of the image you want to display. 
+  - **size** - The size of the image.
+  - **style** - Custom css-based style object. 
   
 #### ToggleSwitch
 Renders a styled checkbox simil to ios switch. It is useful to represent when something is activated or not.
 
 ##### Props 
-  **enabled** - Initial state of the component. 
-  **theme** - Builtin styles. If this prop is not passed "default" theme is applied which is like ios switch toggle.
-  **onClick** - Function to apply when the toggle is clicked.
-  **onStateChanged** - Function to apply when the 'enabled' prop is changed.
+  - **enabled** - Initial state of the component. 
+  - **theme** - Builtin styles. If this prop is not passed "default" theme is applied which is like ios switch toggle.
+  - **onClick** - Function to apply when the toggle is clicked.
+  - **onStateChanged** - Function to apply when the 'enabled' prop is changed.
    
 
 # Third party libraries 
