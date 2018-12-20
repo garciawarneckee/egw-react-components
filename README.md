@@ -44,11 +44,20 @@ Renders an image which is rounded. With three differents sizes: small, medium an
   **src** - The URL of the image you want to display. 
   **size** - The size of the image.
   **style** - Custom css-based style object. 
+  
+#### ToggleSwitch
+Renders a styled checkbox simil to ios switch. It is useful to represent when something is activated or not.
+
+##### Props 
+  **enabled** - Initial state of the component. 
+  **theme** - Builtin styles. If this prop is not passed "default" theme is applied which is like ios switch toggle.
+  **onClick** - Function to apply when the toggle is clicked.
+  **onStateChanged** - Function to apply when the 'enabled' prop is changed.
    
 
 # Third party libraries 
 I used this libraries to create the components:
 
-[react-draggable](https://github.com/mzabriskie/react-draggable)
-[fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
-[storybook](https://storybook.js.org/)
+- [react-draggable](https://github.com/mzabriskie/react-draggable)
+- [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+- [storybook](https://storybook.js.org/)
