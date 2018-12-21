@@ -53,8 +53,14 @@ Renders a styled checkbox simil to ios switch. It is useful to represent when so
   - **theme** - Builtin styles. If this prop is not passed "default" theme is applied which is like ios switch toggle.
   - **onClick** - Function to apply when the toggle is clicked.
   - **onStateChanged** - Function to apply when the 'enabled' prop is changed.
-   
 
+#### IconProvider
+Wraps the FontAwesomeIcon component, in order to import the icon labrary only one time and reuse it anywhere.
+
+##### Props 
+  - **iconName** - The name of the icon to render.
+   
+   
 # Third party libraries 
 I used this libraries to create the components:
 
