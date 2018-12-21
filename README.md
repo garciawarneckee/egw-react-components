@@ -60,7 +60,7 @@ Wraps the FontAwesomeIcon component, in order to import the icon labrary only on
 ##### Props 
   - **iconName** - The name of the icon to render.
    
-
+   
 # Third party libraries 
 I used this libraries to create the components:
 
