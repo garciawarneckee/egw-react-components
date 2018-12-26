@@ -1,0 +1,10 @@
+.question-form {
+  display: flex;
+  flex-direction: row;
+}
+
+button:focus {outline:0;}
+input[type='submit']:focus {outline:0;}
+
+.submit-btn
+  &:hover { cursor: pointer; }

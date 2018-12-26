@@ -6,6 +6,7 @@ import {
 import DragabbleButton from '../lib/atoms/DraggableButton/DraggableButton';
 import RoundedImage from '../lib/atoms/RoundedImage/RoundedImage';
 import ToggleSwitch from '../lib/atoms/ToggleSwitch/ToggleSwitch';
+import TextAndSubmit from '../lib/molecules/TextAndSubmit/TextAndSubmit';
 
 storiesOf('DraggableButton', module)
 
@@ -138,4 +139,9 @@ storiesOf('DraggableButton', module)
         enabled={false}
       />
     ))
+
+    storiesOf('TextAndSubmit', module)
+      .add('Default render', () => (
+        <TextAndSubmit />
+      ))
     
