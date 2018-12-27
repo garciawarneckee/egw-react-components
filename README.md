@@ -89,3 +89,5 @@ I used this libraries to create the components:
 - [react-draggable](https://github.com/mzabriskie/react-draggable)
 - [fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
 - [storybook](https://storybook.js.org/)
+
+## Licence ISC
