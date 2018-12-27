@@ -1,34 +1,54 @@
+/** General styles for form */
 .form {
   display: flex;
   flex-direction: row;
 }
 
+/** Default variables */
 $default-color: #62c28e;
 $default-active-color: #239f69;
 $default-font-color: white;
 $default-border: 1px solid $default-color;
 $class-selector: 'txtnsubmit';
 
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+/** Box shadow mixin helper 
+  @param { Number } $vertical: vertical index for shadow
+  @param { Number } $horizontal: horizontal index for shadow
+  @param { Number } $blur: blur ratio
+  @param { String } $color: color of the sadow
+  @param { Boolean } $inset: set if the shadow is applied inside (true) the box or outside (false)
+*/
+@mixin box-shadow($vertical, $horizontal, $blur, $color, $inset: false) {
   @if $inset {
-    -webkit-box-shadow:inset $top $left $blur $color;
-    -moz-box-shadow:inset $top $left $blur $color;
-    box-shadow:inset $top $left $blur $color;
+    -webkit-box-shadow:inset $vertical $horizontal $blur $color;
+    -moz-box-shadow:inset $vertical $horizontal $blur $color;
+    box-shadow:inset $vertical $horizontal $blur $color;
   } @else {
-    -webkit-box-shadow: $top $left $blur $color;
-    -moz-box-shadow: $top $left $blur $color;
-    box-shadow: $top $left $blur $color;
+    -webkit-box-shadow: $vertical $horizontal $blur $color;
+    -moz-box-shadow: $vertical $horizontal $blur $color;
+    box-shadow: $vertical $horizontal $blur $color;
   }
 }
 
+/** Border mixin helper
+  @param { String } $color: border color
+  @param { Number } $width: border width
+  @param { String } $type: border type
+*/
 @mixin border($color: $default-color, $width: 1px, $type: solid) {
   border: $width $type $color;
 }
 
-
+/** Mixin
+  @param { String } $color: primary color to apply into the component
+  @param { String } $active-color: border color when it´s active
+  @param { String } $font-color: font color
+  @param { String } $class-selector: class name
+  
+*/
 @mixin theme(
   $color: $default-color,
-  $active-border-color: $default-active-color,
+  $active-color: $default-active-color,
   $font-color: $default-font-color,
   $class: $class-selector,
 ) {
@@ -54,14 +74,14 @@ $class-selector: 'txtnsubmit';
     color: $font-color;
 
     &:active {
-      @include border($active-border-color);
-      background-color: $active-border-color;
-      box-shadow: 0 5px $active-border-color;
+      @include border($active-color);
+      background-color: $active-color;
+      box-shadow: 0 5px $active-color;
     }
   }
 }
 
-//APPLING THEMES
+/** Common themes style definitions */
 .txtnsubmit {
   $self: &;
   $input: #{$self}--input;
