@@ -6,6 +6,7 @@ import {
 import DragabbleButton from '../lib/atoms/DraggableButton/DraggableButton';
 import RoundedImage from '../lib/atoms/RoundedImage/RoundedImage';
 import ToggleSwitch from '../lib/atoms/ToggleSwitch/ToggleSwitch';
+import TextAndSubmit from '../lib/molecules/TextAndSubmit/TextAndSubmit';
 
 storiesOf('DraggableButton', module)
 
@@ -83,9 +84,9 @@ storiesOf('DraggableButton', module)
         borderRadius: '4px'
       }
     }
-    onStart = { () => { console.log('Starting dragging') }}
-    onDrag = { (event) => { console.log(`X: ${event.x} Y: ${event.y}`) }}
-    onStop = { () => { console.log('Stop dragging') }}
+    onStart = { () => { alert('Starting dragging') }}
+    onDrag = { (event) => { alert(`X: ${event.x} Y: ${event.y}`) }}
+    onStop = { () => { alert('Stop dragging') }}
     />
   ));
 
@@ -128,7 +129,7 @@ storiesOf('DraggableButton', module)
         theme="default"
         className="app-switch"
         enabled={false}
-        onStateChanged={ () => { console.log('I have changed my status') }}
+        onStateChanged={ () => { alert('I have changed my status') }}
       />
     ))
     .add('Ghrapite small toggle switch', () => ( 
@@ -138,4 +139,70 @@ storiesOf('DraggableButton', module)
         enabled={false}
       />
     ))
+
+    storiesOf('TextAndSubmit', module)
+      .add('Default render', () => (
+        <TextAndSubmit
+          isVisible={true} 
+        />
+      ))
+      .add('With custom placeholder', () => (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+        />
+      ))
+      .add('With custom placeholder and submit button text', () => (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+        />
+      ))
+      .add('With custom style', () => {
+        const style = {
+          padding: '1%',
+          border: 'grey 1px solid',
+          borderRadius: '4px',
+        }
+        return (
+          <TextAndSubmit
+            isVisible={true} 
+            placeholder="A placeholder..."
+            submitText="Send it!"
+            inputStyle={style}
+            btnStyle={style}
+          />
+        )} 
+      )
+      .add('With default theme', () => 
+        (
+          <TextAndSubmit
+            isVisible={true} 
+            placeholder="A placeholder..."
+            submitText="Send it!"
+            theme="default"
+          />
+        ) 
+      )
+      .add('With danger theme', () => 
+      (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+          theme="danger"
+        />
+      )) 
+      .add('With onSubmit custom function', () => 
+      (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+          theme="danger"
+          onSubmit={ () => { alert('executing custom onSubmit function') } }
+        />
+      ))
+    
     
