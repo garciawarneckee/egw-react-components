@@ -6,7 +6,7 @@ in my projects, and I humbly share with you.
 This is not a complete library with a lot of components, and I think that it will never be completed. 
 I will updates components as I need to use it, or I have and new idea of component to reuse.
 
-##Philosophy
+## Philosophy
 I will develop this library following the Atomic Desing philosophy. [atomic-design-web](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Install it
