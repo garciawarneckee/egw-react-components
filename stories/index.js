@@ -185,4 +185,14 @@ storiesOf('DraggableButton', module)
           />
         ) 
       )
+      .add('With danger theme', () => 
+      (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+          theme="danger"
+        />
+      ) 
+    )
     
