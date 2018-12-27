@@ -1,10 +1,13 @@
 # EGW Custom React Components Library
 
 ## Purpose
-  There is not much to say... this is a library that I built to reuse my custom components
-  in my projects, and I humbly share with you. 
-  This is not a complete library with a lot of components, and I think that it will never be completed. 
-  I will updates components as I need to use it, or I have and new idea of component to reuse.
+There is not much to say... this is a library that I built to reuse my custom components
+in my projects, and I humbly share with you. 
+This is not a complete library with a lot of components, and I think that it will never be completed. 
+I will updates components as I need to use it, or I have and new idea of component to reuse.
+
+##Philosophy
+I will develop this library following the Atomic Desing philosophy. [atomic-design-web](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Install it
   `npm i egw-react-components`
@@ -20,6 +23,8 @@
 ## Components Description
 
 `import { NameOfComponent } from 'egw-react-components'`
+
+### Atoms
 
 #### DraggableButton
 Renders a button that allow you to drag and drop in the browser window limited to the body tag.
@@ -59,7 +64,21 @@ Wraps the FontAwesomeIcon component, in order to import the icon labrary only on
 
 ##### Props 
   - **iconName** - The name of the icon to render.
-   
+
+
+### Molecules
+
+#### TextAndSubmit
+Renders a text input and a button in a line that let the user to submit and make something with the entered text.
+
+##### Props 
+  - **isVisible** - Points if the component is visible or not. 
+  - **placeholder** - Fake text indicates the purpose of the text content. 
+  - **submitText** - Text goes in the submit button.
+  - **theme** - Predefined theme available to apply. (default or danger by now).
+  - **inputStyle** - Custom input style.
+  - **btnStyle** - Custom button style.
+  - **onSubmit** - Custom function to apply on submit event.
    
 # Third party libraries 
 I used this libraries to create the components:
