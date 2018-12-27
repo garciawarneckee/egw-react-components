@@ -1,0 +1,27 @@
+/** Box shadow mixin helper 
+  @param { Number } $vertical: vertical index for shadow
+  @param { Number } $horizontal: horizontal index for shadow
+  @param { Number } $blur: blur ratio
+  @param { String } $color: color of the sadow
+  @param { Boolean } $inset: set if the shadow is applied inside (true) the box or outside (false)
+*/
+@mixin box-shadow($vertical, $horizontal, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $vertical $horizontal $blur $color;
+    -moz-box-shadow:inset $vertical $horizontal $blur $color;
+    box-shadow:inset $vertical $horizontal $blur $color;
+  } @else {
+    -webkit-box-shadow: $vertical $horizontal $blur $color;
+    -moz-box-shadow: $vertical $horizontal $blur $color;
+    box-shadow: $vertical $horizontal $blur $color;
+  }
+}
+
+/** Border mixin helper
+  @param { String } $color: border color
+  @param { Number } $width: border width
+  @param { String } $type: border type
+*/
+@mixin border($color: $default-color, $width: 1px, $type: solid) {
+  border: $width $type $color;
+}
