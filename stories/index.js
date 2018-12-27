@@ -142,6 +142,47 @@ storiesOf('DraggableButton', module)
 
     storiesOf('TextAndSubmit', module)
       .add('Default render', () => (
-        <TextAndSubmit />
+        <TextAndSubmit
+          isVisible={true} 
+        />
       ))
+      .add('With custom placeholder', () => (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+        />
+      ))
+      .add('With custom placeholder and submit button text', () => (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+        />
+      ))
+      .add('With custom style', () => {
+        const style = {
+          padding: '1%',
+          border: 'grey 1px solid',
+          borderRadius: '4px',
+        }
+        return (
+          <TextAndSubmit
+            isVisible={true} 
+            placeholder="A placeholder..."
+            submitText="Send it!"
+            inputStyle={style}
+            btnStyle={style}
+          />
+        )} 
+      )
+      .add('With default theme', () => 
+        (
+          <TextAndSubmit
+            isVisible={true} 
+            placeholder="A placeholder..."
+            submitText="Send it!"
+            theme="default"
+          />
+        ) 
+      )
     

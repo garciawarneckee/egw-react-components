@@ -1,4 +1,4 @@
-.question-form {
+.form {
   display: flex;
   flex-direction: row;
 }
@@ -6,5 +6,54 @@
 button:focus {outline:0;}
 input[type='submit']:focus {outline:0;}
 
-.submit-btn
+.submit-btn {
   &:hover { cursor: pointer; }
+}
+  
+$default-color: #62c28e;
+$default-font-color: white;
+$class-selector: 'txtnsubmit';
+
+
+@mixin theme(
+  $color: $default-color,
+  $font-color: $default-font-color,
+  $class: $class-selector
+) {
+
+  //SELECTOR VARAIBLES
+  $self: '.' + $class;
+  $input-default: #{$self}--input-default;
+  $submit-default: #{$self}--submit-default;
+  $default-theme: #{$class}--default;
+  
+  padding: 1%;
+
+  #{$input-default} {
+    border: 1px solid $color;
+
+    &:focus {
+      border: 1px solid #66CC99 !important;
+      box-shadow: 0 0 3px #66CC99 !important;
+      -moz-box-shadow: 0 0 3px #66CC99 !important;
+      -webkit-box-shadow: 0 0 3px #66CC99 !important;
+      outline-offset: 0px !important;
+      outline: none !important;
+    }
+  }
+
+  #{$submit-default} {
+    background-color: $color;
+    border: 1px solid $color;
+    color: $font-color; 
+  }
+}
+
+//APPLING THEMES
+.txtnsubmit {
+  $self: &;
+
+  &#{$self}--default {
+    @include theme();
+  }
+}
