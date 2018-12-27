@@ -9,6 +9,9 @@ I will updates components as I need to use it, or I have and new idea of compone
 ## Philosophy
 I will develop this library following the Atomic Desing philosophy. [atomic-design-web](http://bradfrost.com/blog/post/atomic-web-design/)
 
+## Development notes
+If you checkout this project at first time, after doing `npm install` you have to do `npm build:dev`, this will set up the proper files ready to be working in a local enviroment. (By now this script just generate a local .css file in the same folder of the component that will be not pushed).
+
 ## Install it
   `npm i egw-react-components`
   
