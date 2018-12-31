@@ -194,6 +194,15 @@ storiesOf('DraggableButton', module)
           theme="danger"
         />
       )) 
+      .add('With ocean theme', () => 
+      (
+        <TextAndSubmit
+          isVisible={true} 
+          placeholder="A placeholder..."
+          submitText="Send it!"
+          theme="ocean"
+        />
+      )) 
       .add('With onSubmit custom function', () => 
       (
         <TextAndSubmit
