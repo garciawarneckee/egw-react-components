@@ -62,7 +62,7 @@ $class-selector: 'txtnsubmit';
   $input: #{$self}--input;
   $submit: #{$self}--submit;
 
-  padding: 1%;
+  padding: 1em;
 
   #{$input} {
     border-top-left-radius: 4px;
