@@ -93,4 +93,5 @@ $class-selector: 'txtnsubmit';
   &#{$self}--danger {
     @include theme(#E76565, #C22D2D);
   }
+
 }
