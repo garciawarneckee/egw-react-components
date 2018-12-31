@@ -62,7 +62,7 @@ $class-selector: 'txtnsubmit';
   $input: #{$self}--input;
   $submit: #{$self}--submit;
 
-  padding: 1%;
+  padding: 1em;
 
   #{$input} {
     border-top-left-radius: 4px;
@@ -92,5 +92,9 @@ $class-selector: 'txtnsubmit';
 
   &#{$self}--danger {
     @include theme(#E76565, #C22D2D);
+  }
+
+  &#{$self}--ocean {
+    @include theme(#626DDC, #182497);
   }
 }

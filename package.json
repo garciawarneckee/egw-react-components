@@ -1,6 +1,6 @@
 {
   "name": "egw-react-components",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Custom React Components ",
   "main": "build/index.js",
   "scripts": {
