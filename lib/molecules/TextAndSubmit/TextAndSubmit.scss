@@ -94,4 +94,7 @@ $class-selector: 'txtnsubmit';
     @include theme(#E76565, #C22D2D);
   }
 
+  &#{$self}--ocean {
+    @include theme(#626DDC, #182497);
+  }
 }
