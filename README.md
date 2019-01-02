@@ -39,7 +39,7 @@ Renders a button that allow you to drag and drop in the browser window limited t
   *Either both or one of them needs to be present in order to render the button correctly. 
   If both are present the icon will be displayed and then the text in line.*
 
-  - **defaultPosition** -  An object that represents the initial position of the button. {x: number, y: number }
+  - **initialPosition** -  An object that represents the initial position of the button. {x: number, y: number }
   - **style** - Custom css-based style object. 
   - **onStart** - Function it is executed when the object is started to be dragged. 
   - **onDrag** - Function it is executed every time the object is being dragged.
