@@ -14,6 +14,7 @@
     "lint:watch": "esw -w lib/**",
     "prepare": "npm run build:release",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "gallery": "npm-run-all build:dev storybook",
     "test": "jest"
   },
   "repository": {

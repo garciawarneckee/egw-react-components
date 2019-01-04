@@ -1,0 +1,63 @@
+@import "./helpers.scss";
+@import "./colors.scss";
+
+$default-font-color: white;
+$class-selector: "btn";
+
+@mixin theme(
+  $color: $default,
+  $active-color: $default-active,
+  $font-color: $default-font-color,
+  $class: $class-selector
+) {
+  $self: "." + $class;
+  background-color: $color;
+  color: $font-color;
+
+  @include border($color);
+  @include box-shadow(1px, 3px, 0, $color);
+
+  &:focus {
+    @include border($color);
+  }
+
+  &:active {
+    @include border($active-color);
+    background-color: $active-color;
+    box-shadow: 0 5px $active-color;
+  }
+}
+
+/** Common themes style definitions */
+.btn {
+  $self: &;
+
+  padding: 1em;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+  &:focus {
+    outline-offset: 0px;
+    outline: 0;
+  }
+
+  &#{$self}--default {
+    @include theme();
+  }
+
+  &#{$self}--danger {
+    @include theme($danger, $danger-active);
+  }
+
+  &#{$self}--ocean {
+    @include theme($ocean, $ocean-active);
+  }
+
+  &#{$self}--nature {
+    @include theme($nature, $nature-active);
+  }
+}
