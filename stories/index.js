@@ -7,6 +7,7 @@ import DragabbleButton from '../lib/atoms/DraggableButton/DraggableButton';
 import RoundedImage from '../lib/atoms/RoundedImage/RoundedImage';
 import ToggleSwitch from '../lib/atoms/ToggleSwitch/ToggleSwitch';
 import TextAndSubmit from '../lib/molecules/TextAndSubmit/TextAndSubmit';
+import LoginForm from '../lib/molecules/LoginForm/LoginForm';
 
 storiesOf('DraggableButton', module)
 
@@ -29,6 +30,13 @@ storiesOf('DraggableButton', module)
         borderRadius: '4px'
       }
     }
+    />
+  ))
+  .add('Custom with built in theme ocean', () => ( 
+    <DragabbleButton 
+      iconName='thumbs-up'
+      text='Click me!'
+      theme='ocean'
     />
   ))
   .add('Custom style button with some icon and only X axis move ', () => ( 
@@ -84,9 +92,9 @@ storiesOf('DraggableButton', module)
         borderRadius: '4px'
       }
     }
-    onStart = { () => { alert('Starting dragging') }}
-    onDrag = { (event) => { alert(`X: ${event.x} Y: ${event.y}`) }}
-    onStop = { () => { alert('Stop dragging') }}
+    onStart = { () => { console.log('Starting dragging') }}
+    onDrag = { (event) => { console.log(`X: ${event.x} Y: ${event.y}`) }}
+    onStop = { () => { console.log('Stop dragging') }}
     />
   ));
 
@@ -211,6 +219,29 @@ storiesOf('DraggableButton', module)
           submitText="Send it!"
           theme="danger"
           onSubmit={ () => { alert('executing custom onSubmit function') } }
+        />
+      ))
+
+      storiesOf('LoginForm', module)
+      .add('Default render', () => 
+      (
+        <LoginForm />
+      ))
+      .add('Render with custom placeholders', () => 
+      (
+        <LoginForm 
+          usernamePlaceholder="Custom username placeholder"
+          passwordPlaceholder="Custom password placeholder"
+          submitText="Custom text for login"
+        />
+      ))
+      .add('Render with custom functions', () => 
+      (
+        <LoginForm 
+          usernamePlaceholder="Custom username placeholder"
+          passwordPlaceholder="Custom password placeholder"
+          submitText="Custom text for login"
+          onSubmit={ (e) => { e.preventDefault(); alert("Custom onSubmit function executed") } }
         />
       ))
     

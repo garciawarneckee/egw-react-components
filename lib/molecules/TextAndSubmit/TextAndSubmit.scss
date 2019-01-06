@@ -1,59 +1,11 @@
 @import '../../styles/helpers.scss';
+@import '../../styles/input.scss';
+@import '../../styles/button.scss';
 
 /** General styles for form */
 .form {
   display: flex;
   flex-direction: row;
-}
-
-/** Default variables */
-$default-color: #62c28e;
-$default-active-color: #239f69;
-$default-font-color: white;
-$default-border: 1px solid $default-color;
-$class-selector: 'txtnsubmit';
-
-
-/** Mixin
-  @param { String } $color: primary color to apply into the component
-  @param { String } $active-color: border color when it´s active
-  @param { String } $font-color: font color
-  @param { String } $class-selector: class name
-  
-*/
-@mixin theme(
-  $color: $default-color,
-  $active-color: $default-active-color,
-  $font-color: $default-font-color,
-  $class: $class-selector,
-) {
-
-  //SELECTOR VARAIBLES
-  $self: '.' + $class;
-  $input: #{$self}--input;
-  $submit: #{$self}--submit;
-  
-  #{$input} {
-    @include border($color);
-    @include box-shadow(1px, 3px, 0, $color);
-
-    &:focus {
-      @include border($color);
-    }
-  }
-
-  #{$submit} {
-    @include border($color);
-    @include box-shadow(1px, 3px, 0, $color);
-    background-color: $color;
-    color: $font-color;
-
-    &:active {
-      @include border($active-color);
-      background-color: $active-color;
-      box-shadow: 0 5px $active-color;
-    }
-  }
 }
 
 /** Common themes style definitions */
@@ -65,36 +17,16 @@ $class-selector: 'txtnsubmit';
   padding: 1em;
 
   #{$input} {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    
-    &:focus {
-      outline-offset: 0px;
-      outline: 0;
-    }
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
   }
 
   #{$submit} {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-
-    &:hover { cursor: pointer; }
-    &:active { transform: translateY(1px); }
-    &:focus {
-      outline-offset: 0px;
-      outline: 0;
-    }
-  }
-
-  &#{$self}--default {
-    @include theme();
-  }
-
-  &#{$self}--danger {
-    @include theme(#E76565, #C22D2D);
-  }
-
-  &#{$self}--ocean {
-    @include theme(#626DDC, #182497);
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
   }
 }

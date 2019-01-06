@@ -1,0 +1,64 @@
+@import "../../styles/helpers.scss";
+@import "../../styles/button.scss";
+@import "../../styles/input.scss";
+@import "../../styles/colors.scss";
+
+$default-font-color: white;
+$class-selector: "login-form";
+
+@mixin theme($color: $default, $class: $class-selector) {
+  $self: "." + $class;
+  $login-button: #{$self}--button;
+  $login-input: #{$self}--input;
+
+  color: $default-font-color;
+  border-radius: 4px;
+  padding: 1em;
+  @include border($color);
+  @include box-shadow(1px, 3px, 0, $color);
+
+  &#{$login-button} {
+    background-color: $color;
+
+    &:focus {
+      outline-offset: 0px;
+      outline: 0;
+    }
+  }
+
+  &#{$login-input} {
+    background-color: white;
+
+    &:focus {
+      outline-offset: 0px;
+      outline: 0;
+    }
+  }
+}
+
+.login-form-container {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  min-height: 250px;
+  width: 60%;
+  margin: auto;
+
+  &#{$self}--default {
+    @include theme();
+  }
+
+  &#{$self}--danger {
+    @include theme($danger);
+  }
+
+  &#{$self}--ocean {
+    @include theme($ocean);
+  }
+
+  &#{$self}--nature {
+    @include theme($nature);
+  }
+}

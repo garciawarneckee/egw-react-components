@@ -1,10 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { expect, assert } from 'chai';
-import sinon from 'sinon';
+import { expect } from 'chai';
 
 import RoundedImage from '../../lib/atoms/RoundedImage/RoundedImage';
-import defaultImage from "../../assets/images/no-image-available.png";
 
 describe('<RoundedImage />', () => {
 
