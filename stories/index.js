@@ -85,9 +85,9 @@ storiesOf('DraggableButton', module)
         borderRadius: '4px'
       }
     }
-    onStart = { () => { alert('Starting dragging') }}
-    onDrag = { (event) => { alert(`X: ${event.x} Y: ${event.y}`) }}
-    onStop = { () => { alert('Stop dragging') }}
+    onStart = { () => { console.log('Starting dragging') }}
+    onDrag = { (event) => { console.log(`X: ${event.x} Y: ${event.y}`) }}
+    onStop = { () => { console.log('Stop dragging') }}
     />
   ));
 
