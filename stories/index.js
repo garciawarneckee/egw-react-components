@@ -32,6 +32,13 @@ storiesOf('DraggableButton', module)
     }
     />
   ))
+  .add('Custom with built in theme ocean', () => ( 
+    <DragabbleButton 
+      iconName='thumbs-up'
+      text='Click me!'
+      theme='ocean'
+    />
+  ))
   .add('Custom style button with some icon and only X axis move ', () => ( 
     <DragabbleButton 
     iconName='thumbs-up'
