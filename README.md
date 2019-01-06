@@ -41,6 +41,7 @@ Renders a button that allow you to drag and drop in the browser window limited t
 
   - **initialPosition** -  An object that represents the initial position of the button. {x: number, y: number }
   - **style** - Custom css-based style object. 
+  - **onClick** - Function it is executed when the object is clicked. 
   - **onStart** - Function it is executed when the object is started to be dragged. 
   - **onDrag** - Function it is executed every time the object is being dragged.
   - **onStop** - Fucntion it is executed when the object is dropped.
