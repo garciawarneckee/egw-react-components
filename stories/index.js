@@ -96,6 +96,13 @@ storiesOf('DraggableButton', module)
     onDrag = { (event) => { console.log(`X: ${event.x} Y: ${event.y}`) }}
     onStop = { () => { console.log('Stop dragging') }}
     />
+  ))
+  .add('Custom onClick function', () => ( 
+    <DragabbleButton 
+      iconName='thumbs-up'
+      theme="default"
+      onClick = { () => { alert('executing custon onClick function') }}
+    />
   ));
 
   storiesOf('RoundedImage', module)
