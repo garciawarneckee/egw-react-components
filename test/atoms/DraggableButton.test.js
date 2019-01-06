@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { expect, assert } from 'chai';
+import sinon from 'sinon';
 
 import DraggableButton from '../../lib/atoms/DraggableButton/DraggableButton';
 
@@ -46,6 +47,13 @@ describe('<DragabbleButton />', () => {
     expect(button).to.have.lengthOf(1);
     expect(button.text()).to.be.eql('Click me!');
     expect(wrapper.find('.icon')).to.have.lengthOf(0);
+  });
+
+  it('executes onClick function', () => {
+    const mockOnClick = sinon.spy();
+    const wrapper = shallow(<DraggableButton text='Click me!' onClick={mockOnClick}/>);
+    wrapper.find('button').simulate('click', { preventDefault() {} });
+    expect(mockOnClick).to.have.property('callCount', 1);
   });
 
 });
