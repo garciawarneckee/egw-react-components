@@ -17,7 +17,7 @@ If you checkout this project at first time, after doing `npm install` you have t
   
 ## How to view the components 
   To get a view of the component's behavior execute:
-  `npm run storybook`
+  `npm run gallery`
   
   This will run an app called [storybook](https://storybook.js.org/) that opens a new browser tab that displays different cases of each components that lets you intereact with them. 
   
@@ -82,6 +82,18 @@ Renders a text input and a button in a line that let the user to submit and make
   - **inputStyle** - Custom input style.
   - **btnStyle** - Custom button style.
   - **onSubmit** - Custom function to apply on submit event.
+
+  #### LoginForm
+Simple login form with username and password input.
+
+##### Props 
+- **usernamePlaceholder** - Guiding text to show in the username input.
+- **passwordPlaceholder** - Guiding text to show in the password input.
+- **sumitText** - Guiding text to show in the submit button         
+- **theme** - Indicates the style to apply in the whole component              
+- **onSubmit** - Custom function to execute when the form is submitted           
+
+
    
 # Third party libraries 
 I used this libraries to create the components:

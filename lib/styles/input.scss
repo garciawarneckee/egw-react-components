@@ -1,0 +1,48 @@
+@import "./helpers.scss";
+@import "./colors.scss";
+
+$default-font-color: white;
+$class-selector: "input";
+
+@mixin theme(
+  $color: $default,
+  $active-color: $default-active,
+  $class: $class-selector
+) {
+  $self: &;
+  $input: #{$self}--input;
+
+  color: $active-color;
+  @include border($color);
+  @include box-shadow(1px, 3px, 0, $color);
+
+  &:focus {
+    outline-offset: 0px;
+    outline: 0;
+    @include border($active-color);
+    @include box-shadow(1px, 3px, 0, $active-color);
+  }
+}
+
+.input {
+  $self: &;
+
+  padding: 1em;
+  border-radius: 4px;
+
+  &#{$self}--default {
+    @include theme();
+  }
+
+  &#{$self}--danger {
+    @include theme($danger, $danger-active);
+  }
+
+  &#{$self}--ocean {
+    @include theme($ocean, $ocean-active);
+  }
+
+  &#{$self}--nature {
+    @include theme($nature, $nature-active);
+  }
+}
