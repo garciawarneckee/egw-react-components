@@ -80,6 +80,7 @@ Renders a text input and a button in a line that let the user to submit and make
   - **placeholder** - Fake text indicates the purpose of the text content. 
   - **submitText** - Text goes in the submit button.
   - **theme** - Predefined theme available to apply. (default or danger by now).
+  - **formStyle** - Custom from style.
   - **inputStyle** - Custom input style.
   - **btnStyle** - Custom button style.
   - **onSubmit** - Custom function to apply on submit event.
